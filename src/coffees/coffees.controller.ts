@@ -10,7 +10,7 @@ import {
 import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
-import { ActiveUser } from 'src/iam/authentication/decorators/active-user.decorator';
+import { ActiveUser } from 'src/iam/decorators/active-user.decorator';
 import { ActiveUserData } from 'src/iam/interfaces/active-user-data.interface';
 import { Role } from 'src/users/enums/role.enum';
 import { Roles } from 'src/iam/authorization/decorators/roles.decorator';
@@ -19,7 +19,7 @@ import { Permissions } from 'src/iam/authorization/decorators/permissions.decora
 import { Policies } from 'src/iam/authorization/decorators/policies.decorator';
 import { FrameworkContributorPolicy } from 'src/iam/authorization/policies/framework-contributor.policy';
 import { AuthType } from 'src/iam/authentication/enums/auth-type.enum';
-import { Auth } from 'src/iam/authentication/decorators/auth.decorator';
+import { Auth } from 'src/iam/decorators/auth.decorator';
 
 @Auth(AuthType.Bearer, AuthType.ApiKey)
 @Controller('coffees')

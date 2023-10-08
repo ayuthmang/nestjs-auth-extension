@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { AUTH_TYPE_KEY } from '../decorators/auth.decorator';
+import { AUTH_TYPE_KEY } from '../../decorators/auth.decorator';
 import { AuthType } from '../enums/auth-type.enum';
 import { AccessTokenGuard } from './access-token.guard';
 import { ApiKeyGuard } from './api-key.guard';

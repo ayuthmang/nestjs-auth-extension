@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { Auth } from '../decorators/auth.decorator';
+import { Auth } from '../../decorators/auth.decorator';
 import { GoogleTokenDto } from '../dto/google-token.dto';
 import { AuthType } from '../enums/auth-type.enum';
 import { GoogleAuthenticationService } from './google-authentication.service';
