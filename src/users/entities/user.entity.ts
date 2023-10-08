@@ -1,4 +1,10 @@
-import { Column, Entity, JoinTable, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Role } from '../enums/role.enum';
 import {
   Permission,
@@ -14,7 +20,7 @@ export class User {
   @Column({ unique: true })
   email: string;
 
-  @Column()
+  @Column({ nullable: true }) // 👈
   password: string;
 
   @Column({ enum: Role, default: Role.Regular })
@@ -29,4 +35,7 @@ export class User {
   @JoinTable() // 👈
   @OneToMany(() => ApiKey, (apiKey) => apiKey.user)
   apiKeys: ApiKey[];
+
+  @Column({ nullable: true })
+  googleId: string; // 👈 NEW
 }
